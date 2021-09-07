@@ -13,12 +13,37 @@
         
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/estilo.css">
-        
-        
        
     </head>
-    <body>
-        
+    <body onload='initFunction()'>
+        <script>
+            function initFunction() {
+                var url = "https://jknoda-b.herokuapp.com/oapi/ip/create";
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", url, true);
+                xhr.onload = function (e) {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            document.getElementById("contador").innerHTML = xhr.responseText;
+                        } else {
+                            document.getElementById("contador").innerHTML = '#1';
+                        }
+                    }
+                };
+                xhr.onerror = function (e) {
+                    document.getElementById("contador").innerHTML = '#2';
+                };
+                xhr.send(null); 
+                /*
+                var url = "https://jknoda-b.herokuapp.com/oapi/ip/create";
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET", url, false);
+                xhttp.send();
+                document.getElementById("contador").innerHTML = xhttp.responseText;
+                */
+            }
+        </script>
+
         <header class="main-header">
             <a href="index.html" class="main-header-link imagem-link">
                 <img src="images/avatar.jpg" alt="texto qualquer">
@@ -192,6 +217,7 @@
 				<li><a href="mailto:jknoda@gmail.com" target="_blank" class="icon-link" title="jknoda@gmail.com"><span class="hidden">Email</span><i class="fa fa-envelope"></i></a></li>
                 <li><a href="https://wa.me/5512997683407" target="_blank" class="icon-link" title="(12)99768-3407"><i class="fab fa-whatsapp"></i></a></li>
             </ul>
+            <div id='contador'>0</div>
         </footer>
     </body>
 </html>
