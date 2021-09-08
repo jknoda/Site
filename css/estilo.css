@@ -108,7 +108,7 @@ li{
 .ul-icons{
     list-style-type: none;
     padding-left: 0; 
-    padding-right: 20px;
+    padding-right: 40px;
 }
 .ul-icons li{
     display: inline-block;
@@ -218,7 +218,7 @@ textarea{
     left: 0;
     height: 100%;
     width: 30%;
-    padding: 124px 54px 72px;
+    padding: 100px 54px 72px;
     box-sizing: border-box;
     background-image: url(../images/overlay.png), url(../images/bg.jpg);
     background-position: left top;
@@ -247,7 +247,7 @@ textarea{
 .main-content{
     width: 70%;
     margin-left: 30%;
-    padding: 124px 54px 72px;
+    padding: 60px 54px 72px;
     box-sizing: border-box;
 }
 
@@ -349,8 +349,11 @@ textarea{
 }
 
 .contador{
-    list-style-type: none;
-    padding-left: 0; 
-    padding-right: 20px;
+    padding-right: 40px;
     color: white;
+}
+
+.ircv{
+    padding-right: 40px;
+    color: black;
 }
