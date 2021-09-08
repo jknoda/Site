@@ -108,6 +108,7 @@ li{
 .ul-icons{
     list-style-type: none;
     padding-left: 0; 
+    padding-right: 20px;
 }
 .ul-icons li{
     display: inline-block;
@@ -211,12 +212,17 @@ textarea{
     border: 1px solid #ddd;
 }
 
+.endereco{
+    font-size: 10px;
+    color: white;
+}
+
 .main-header{
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
-    width: 35%;
+    width: 30%;
     padding: 124px 54px 72px;
     box-sizing: border-box;
     background-image: url(../images/overlay.png), url(../images/bg.jpg);
@@ -275,7 +281,7 @@ textarea{
     bottom: 0;
     width: 35%;
     left: 0;
-    padding: 0 54px 72px 0;
+    padding: 0 54px 72px 10px;
     box-sizing: border-box;
     text-align: right;
 }
@@ -290,6 +296,7 @@ textarea{
   font-size: .75em;   
     border-bottom: none;
 }
+
 .copyright{
     list-style: none;
 }
